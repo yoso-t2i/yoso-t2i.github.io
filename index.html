@@ -94,7 +94,12 @@
 <div class="content">
   <p style="text-align:left; font-size: 2em; font-weight: bold" class="serif">Methodology</p>
   <p style="font-size: 1.2em" class="serif">
-    To Do...
+    Our approach combines diffusion processes with GANs, bridging the gap between the two models and leveraging the distinct advantages of each: it can be versatile for various downstream tasks while also boasting the advantage of rapid generation. To address the typical instability in GAN training, we do not directly use real data as ground truth for training. Specifically, we believe that the quality of images denoised by generator from highly-noised images will be lower than that from lowly-noised images. Therefore, we use the former as the fake images for GAN training and the latter as the real images. This design significantly stabilizes our GAN training process, and since the training is still defined on clean samples, it successfully acquires the ability to perform one-step generation.
+
+    Benefiting from the proposed design, our method possesses the following advantages: 
+    1. A stable training process, 
+    2. Extremely fast high-quality one-step generation, 
+    3. Broad prospects for application in various downstream tasks.
   </p>
   <img class="summary-img" src="figs/frame.png" style="width:100%;"> <br>
 </div>
